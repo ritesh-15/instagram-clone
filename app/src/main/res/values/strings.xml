@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Instagram-Clone</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+
+    <string name="log_in">Log In</string>
+    <string name="sign_in">Sign In</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_account">Already have account?</string>
+
+    <string name="next">Next</string>
+    <string name="enter_confirmation_code">Enter Confirmation Code</string>
+    <string name="request_a_new_one">Request a new one</string>
+    <string name="confirmation_code">Confirmation Code</string>
+    <string name="name_and_password">Name And Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="continue_text">Continue</string>
+    <string name="welcome_to_instagram">Welcome to instagram,</string>
+    <string name="welcome_message">Find people to follow and start sharing photos.\n You can change your username anytime</string>
+    <string name="change_username">Change Username</string>
+    <string name="by_clicking_next_you_are_agree_to_our_terms_data_policy_and_cookies_policy">By clicking next you are agree to our Terms, Data Policy and Cookies Policy</string>
+    <string name="change_username_message">Pick username for your account. You can always change it later</string>
+    <string name="add_profile_photo">Add Profile Photo</string>
+    <string name="add_photo_message">Add a profile photo so your friends knows its you</string>
+    <string name="add_a_photo">Add a photo</string>
+    <string name="skip">Skip</string>
+    <string name="chats">Chats</string>
+    <string name="post">Post</string>
+    <string name="home">Home</string>
+    <string name="reels">Reels</string>
+    <string name="likes">Likes</string>
+    <string name="profile">Profile</string>
+
+</resources>
