@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.instagram_clone.R
 import com.example.instagram_clone.adapters.PostAdapter
 import com.example.instagram_clone.adapters.StoryAdapter
+import com.example.instagram_clone.data.PostsData
 import com.example.instagram_clone.databinding.FragmentHomeBinding
 import com.example.instagram_clone.models.Post
 
@@ -27,25 +28,7 @@ class HomeFragment : Fragment() {
 
         // set up dummy post data
 
-        val posts = ArrayList<Post>()
-
-        posts.add(Post(1,"ritesh_khore",
-            "https://images.unsplash.com/photo-1611416370495-50fac9e1b382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60","First post"))
-
-        posts.add(Post(2,"omkar12",
-            "https://images.unsplash.com/photo-1611416370495-50fac9e1b382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60","Second post"))
-
-        posts.add(Post(3,"rohit_13k",
-            "https://images.unsplash.com/photo-1611416370495-50fac9e1b382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
-            "Third post"))
-
-        posts.add(Post(3,"rohit_13k",
-            "https://images.unsplash.com/photo-1611416370495-50fac9e1b382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
-            "Third post"))
-
-        posts.add(Post(3,"rohit_13k",
-            "https://images.unsplash.com/photo-1611416370495-50fac9e1b382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
-            "Third post"))
+        val posts = PostsData.getPosts()
 
         posts.add(Post(3,"rohit_13k",
             "https://images.unsplash.com/photo-1611416370495-50fac9e1b382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",

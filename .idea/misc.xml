@@ -6,6 +6,8 @@
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/drawable/bg_custom_button.xml" value="0.1245" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/drawable/bg_custom_input.xml" value="0.186" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/drawable/bg_home_story.xml" value="0.1245" />
+        <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/drawable/bg_profile_edit_button.xml" value="0.1245" />
+        <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/drawable/profile_btn_icon.xml" value="0.1245" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/drawable/selector_bottom_navigation.xml" value="0.1245" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/drawable/selector_bottom_navigation_heart.xml" value="0.1245" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/activity_auth.xml" value="0.21927083333333333" />
@@ -17,11 +19,17 @@
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/fragment_login.xml" value="0.20208333333333334" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/fragment_name_and_password.xml" value="0.21666666666666667" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/fragment_new_user_welcome.xml" value="0.21666666666666667" />
+        <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/fragment_posts.xml" value="0.21666666666666667" />
+        <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/fragment_posts_tags.xml" value="0.21666666666666667" />
+        <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/fragment_profile.xml" value="0.21666666666666667" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/fragment_profile_photo.xml" value="0.21666666666666667" />
+        <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/fragment_search.xml" value="0.21666666666666667" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/item_home_post.xml" value="0.21666666666666667" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/item_home_story.xml" value="0.21666666666666667" />
+        <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/layout/rv_profile_post_item.xml" value="0.21666666666666667" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/menu/menu_bottom_navigation_main.xml" value="0.21666666666666667" />
         <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/menu/menu_home_fragment_topbar.xml" value="0.21666666666666667" />
+        <entry key="..\:/Development/Android/InstagramClone/app/src/main/res/menu/menu_profile_fragment_topbar.xml" value="0.21666666666666667" />
       </map>
     </option>
   </component>
