@@ -32,5 +32,9 @@
     <string name="reels">Reels</string>
     <string name="likes">Likes</string>
     <string name="profile">Profile</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="create_post_image_description">Create your post with beautiful image and get likes, comments from your friends</string>
+    <string name="add_image">Add Image</string>
+    <string name="write_a_caption">Write a caption</string>
 
 </resources>

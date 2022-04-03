@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
 
                 R.id.item_profile -> {
-                    replaceFragments(ProfileFragment())
+                    replaceFragments(ProfileFragment(),true)
                 }
 
                 R.id.item_like -> {
@@ -43,10 +43,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     // replace fragments
-    private fun replaceFragments(fragment: Fragment){
+    fun replaceFragments(fragment: Fragment,addToBackStack:Boolean = false){
         supportFragmentManager.beginTransaction().apply {
             replace(binding.flMainActivity.id,fragment)
-            addToBackStack(null)
+            if(addToBackStack){
+                addToBackStack(null)
+            }
             commit()
         }
     }

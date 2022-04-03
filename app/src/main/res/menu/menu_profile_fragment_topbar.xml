@@ -12,7 +12,7 @@
     <item
         android:title="@string/chats"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_chat_icon"
+        android:icon="@drawable/ic_menu_icon"
         android:id="@+id/menu_item_home_messages"
         />
 
