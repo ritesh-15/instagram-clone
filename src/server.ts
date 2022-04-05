@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 import passport from "passport";
 import { passportJwt } from "./middlewares/passportJwt";
 import { userRouter } from "./routes/user-routes";
+import cors from "cors";
 
 const app: Application = express();
 
@@ -19,6 +20,13 @@ connection();
 app.use(express.json({ limit: "100mb" }));
 app.use(express.urlencoded({ limit: "100mb", extended: false }));
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 
 // passport
 passport.initialize();
