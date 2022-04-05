@@ -1,7 +1,7 @@
 import { Request } from "express";
 import { PassportStatic } from "passport";
 import { Strategy as JwtStratergy } from "passport-jwt";
-import Keys from "../keys/keys";
+import Keys from "../keys/Keys";
 import User from "../models/UserModel";
 
 const extractTokenFromCookie = (req: Request) => {

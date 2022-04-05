@@ -1,6 +1,6 @@
 import { ObjectId } from "mongoose";
 import jwt from "jsonwebtoken";
-import Keys from "../keys/keys";
+import Keys from "../keys/Keys";
 
 class JWTTokens {
   static generateTokens(userId: string | ObjectId) {

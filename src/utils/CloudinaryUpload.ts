@@ -1,5 +1,5 @@
 import { v2 as Cloudinary } from "cloudinary";
-import Keys from "../keys/keys";
+import Keys from "../keys/Keys";
 
 class CloudinaryUpload {
   static init() {

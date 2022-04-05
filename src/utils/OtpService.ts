@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import Keys from "../keys/keys";
+import Keys from "../keys/Keys";
 
 class OtpService {
   data: string;

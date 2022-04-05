@@ -1,5 +1,5 @@
 import sgmail from "@sendgrid/mail";
-import Keys from "../keys/keys";
+import Keys from "../keys/Keys";
 
 class EmailSender {
   to: string;

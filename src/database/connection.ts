@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Keys from "../keys/keys";
+import Keys from "../keys/Keys";
 
 export const connection = async () => {
   try {
