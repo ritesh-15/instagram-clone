@@ -48,6 +48,10 @@ const userSchema = new Schema<UserInterface>(
       type: Date,
       default: () => Date.now(),
     },
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,

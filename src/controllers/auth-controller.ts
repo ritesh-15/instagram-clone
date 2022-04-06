@@ -203,6 +203,10 @@ class AuthController {
       if (!OtpService.verify(email, otp, time, hashedOtp))
         return next(CreateHttpErrors.forbidden("Otp not valid!"));
 
+      user.isVerified = true;
+
+      await user.save();
+
       const { accessToken, refreshToken } = JWTTokens.generateTokens(user._id);
 
       await Token.create({ userId: user._id, refreshToken });

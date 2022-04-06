@@ -16,4 +16,5 @@ export interface UserInterface {
   bio: string;
   resetToken: string;
   resetTokenExpiration: Date;
+  isVerified: boolean;
 }
