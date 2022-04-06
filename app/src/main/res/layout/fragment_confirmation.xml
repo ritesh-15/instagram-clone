@@ -51,6 +51,7 @@
                     android:gravity="center"
                     android:textSize="14sp"
                     android:textColor="@color/textLight"
+                    android:id="@+id/tv_email_message"
                     />
 
                 <TextView
@@ -62,6 +63,7 @@
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:textColor="@color/textPrimary"
+                    android:id="@+id/tv_resend_otp"
                     />
 
 

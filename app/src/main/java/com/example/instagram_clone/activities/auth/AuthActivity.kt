@@ -3,10 +3,11 @@ package com.example.instagram_clone.activities.auth
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.instagram_clone.activities.BaseActivity
 import com.example.instagram_clone.databinding.ActivityAuthBinding
 import com.example.instagram_clone.fragments.auth.LoginFragment
 
-class AuthActivity : AppCompatActivity() {
+class AuthActivity : BaseActivity() {
 
     private lateinit var binding:ActivityAuthBinding
 
@@ -23,7 +24,7 @@ class AuthActivity : AppCompatActivity() {
 
     // handle replace fragments
     private fun handleReplaceFragments(){
-        replaceFragments(LoginFragment(),true)
+        replaceFragments(LoginFragment())
     }
 
     // replace fragments

@@ -18,7 +18,7 @@ import java.io.Serializable
   bio: string;
   resetToken: string;
   resetTokenExpiration: Date;
-
+  isVerified:boolean
 */
 
 data class User(
@@ -29,5 +29,6 @@ data class User(
     val bio:String,
     val role:String,
     val createdAt:String,
-    val avatar:Avatar
+    val avatar:Avatar,
+    val isVerified:Boolean
 ):Serializable

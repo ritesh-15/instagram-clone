@@ -36,5 +36,9 @@
     <string name="create_post_image_description">Create your post with beautiful image and get likes, comments from your friends</string>
     <string name="add_image">Add Image</string>
     <string name="write_a_caption">Write a caption</string>
+    <string name="confirmation_code_message">Enter 6 digit code we have sent to %1$s</string>
+    <string name="email_verification">Email Verification</string>
+    <string name="please_verify_email">Your email is not verified please verify email to continue.</string>
+    <string name="verify">Verify</string>
 
 </resources>
