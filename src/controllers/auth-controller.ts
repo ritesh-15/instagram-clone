@@ -88,7 +88,8 @@ class AuthController {
     let { refreshToken: recivedRefreshToken } = req.cookies;
 
     if (!recivedRefreshToken) {
-      recivedRefreshToken = req.headers["refreshtoken"];
+      const token = req.headers["refreshtoken"]?.toString();
+      recivedRefreshToken = token?.split(" ")[1];
     }
 
     try {
