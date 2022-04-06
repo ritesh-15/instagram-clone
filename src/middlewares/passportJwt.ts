@@ -10,9 +10,10 @@ const extractTokenFromCookie = (req: Request) => {
 
   if (!accessToken) {
     const token = req.headers["authorization"];
-
     accessToken = token?.split(" ")[1];
   }
+
+  console.log(req.headers);
 
   return accessToken;
 };

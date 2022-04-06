@@ -7,7 +7,10 @@ import cookieParser from "cookie-parser";
 import passport from "passport";
 import { passportJwt } from "./middlewares/passportJwt";
 import { userRouter } from "./routes/user-routes";
+import hemlet from "helmet";
+import morgan from "morgan";
 import cors from "cors";
+import helmet from "helmet";
 
 const app: Application = express();
 
@@ -17,6 +20,8 @@ const PORT = process.env.PORT || 9000;
 connection();
 
 // middlewares
+app.use(helmet());
+app.use(morgan("dev"));
 app.use(express.json({ limit: "100mb" }));
 app.use(express.urlencoded({ limit: "100mb", extended: false }));
 app.use(cookieParser());
@@ -35,6 +40,10 @@ passportJwt(passport);
 // routes
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/user", userRouter);
+
+app.get("/auth/fail", (req, res, next) => {
+  return next(CreateHttpErrors.unauthorized());
+});
 
 // error handler
 app.use((req, res, next) => {
