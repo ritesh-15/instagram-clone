@@ -11,10 +11,12 @@ const extractTokenFromCookie = (req: Request) => {
   if (!accessToken) {
     const token = req.headers["authorization"];
     accessToken = token?.split(" ")[1];
+    const key = token?.split(" ")[0];
+
+    if (key != "Bearer") {
+      return null;
+    }
   }
-
-  console.log(req.headers);
-
   return accessToken;
 };
 
