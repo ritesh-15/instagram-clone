@@ -109,8 +109,8 @@ class UserController {
         user: user,
         success: true,
       });
-    } catch (error) {
-      console.log(error);
+    } catch (error: any) {
+      console.log(error.message);
       next(CreateHttpErrors.internalServerError());
     }
   }
