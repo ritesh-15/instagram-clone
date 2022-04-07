@@ -110,6 +110,7 @@ class UserController {
         success: true,
       });
     } catch (error) {
+      console.log(error);
       next(CreateHttpErrors.internalServerError());
     }
   }
