@@ -11,6 +11,7 @@ import hemlet from "helmet";
 import morgan from "morgan";
 import cors from "cors";
 import helmet from "helmet";
+import path from "path";
 
 const app: Application = express();
 
@@ -31,6 +32,11 @@ app.use(
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
+);
+
+app.use(
+  "/public/uploads",
+  express.static(path.resolve(__dirname, "public/uploads"))
 );
 
 // passport

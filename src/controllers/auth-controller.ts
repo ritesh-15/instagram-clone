@@ -85,11 +85,15 @@ class AuthController {
   // @desc Refresh JWT token
   // @access Private
   static async refresh(req: Request, res: Response, next: NextFunction) {
-    let { refreshToken: recivedRefreshToken } = req.cookies;
+    let recivedRefreshToken = req.cookies.refreshToken;
 
     if (!recivedRefreshToken) {
       const token = req.headers["refreshtoken"]?.toString();
       recivedRefreshToken = token?.split(" ")[1];
+    }
+
+    if (!recivedRefreshToken) {
+      return next(CreateHttpErrors.notFound("Refresh token not found!"));
     }
 
     try {

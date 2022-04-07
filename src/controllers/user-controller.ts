@@ -3,6 +3,9 @@ import CreateHttpErrors from "../errors/CreateHttpErrors";
 import { UserInterface } from "../interfaces/UserInterface";
 import bcrypt from "bcrypt";
 import User from "../models/UserModel";
+import fs from "fs";
+import path from "path";
+import Keys from "../keys/Keys";
 import CloudinaryUpload from "../utils/CloudinaryUpload";
 
 class UserController {
@@ -78,14 +81,24 @@ class UserController {
   // @desc Update profile
   // @access Private
   static async updateProfile(req: Request, res: Response, next: NextFunction) {
-    const { bio, name, avatar } = req.body;
+    const { bio, name } = req.body;
     const currentUser = req.user as UserInterface;
 
     try {
-      let uploadedAvatar = null;
-
-      if (avatar) {
-        uploadedAvatar = await CloudinaryUpload.uploadAsAvatar(avatar);
+      if (req.file) {
+        fs.unlink(
+          path.join(
+            __dirname,
+            `../public/uploads/${currentUser.avatar.publicId}`
+          ),
+          (error) => {
+            if (error) {
+              return next(
+                CreateHttpErrors.internalServerError("Something went wrong!")
+              );
+            }
+          }
+        );
       }
 
       const user = await User.findOneAndUpdate(
@@ -94,10 +107,10 @@ class UserController {
           $set: {
             bio: bio || currentUser.bio,
             name: name || currentUser.name,
-            avatar: uploadedAvatar
+            avatar: req.file
               ? {
-                  url: uploadedAvatar.secure_url,
-                  publicId: uploadedAvatar.public_id,
+                  url: `${Keys.APP_BASE_URL}/public/upload/${req.file.filename}`,
+                  publicId: req.file.filename,
                 }
               : currentUser.avatar,
           },
@@ -110,7 +123,6 @@ class UserController {
         success: true,
       });
     } catch (error: any) {
-      console.log(error.message);
       next(CreateHttpErrors.internalServerError());
     }
   }

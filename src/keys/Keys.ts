@@ -11,6 +11,7 @@ class Keys {
   static readonly CLOUDINARY_API_KEY = process.env.CLOUDINARY_API_KEY!!;
   static readonly CLOUDINARY_API_SECRET = process.env.CLOUDINARY_API_SECRET!!;
   static readonly CLOUD_NAME = process.env.CLOUD_NAME!!;
+  static readonly APP_BASE_URL = process.env.APP_BASE_URL!!;
 }
 
 export default Keys;

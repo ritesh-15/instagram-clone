@@ -1,6 +1,7 @@
 import { Router } from "express";
 import UserController from "../controllers/user-controller";
 import { isAuthenticated } from "../middlewares/isAuthenticated";
+import { uploader } from "../middlewares/uploadMiddleware";
 
 const router = Router();
 
@@ -12,6 +13,6 @@ router
 
 router
   .route("/update-profile")
-  .put(isAuthenticated, UserController.updateProfile);
+  .put([isAuthenticated], UserController.updateProfile);
 
 export { router as userRouter };
