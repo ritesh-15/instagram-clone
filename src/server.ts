@@ -21,6 +21,8 @@ const PORT = process.env.PORT || 9000;
 connection();
 
 // middlewares
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json({ limit: "100mb" }));
@@ -33,8 +35,6 @@ app.use(
     credentials: true,
   })
 );
-
-app.use("/public/uploads", express.static(path.resolve("public/uploads")));
 
 // passport
 passport.initialize();

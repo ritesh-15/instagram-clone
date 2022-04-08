@@ -85,20 +85,20 @@ class UserController {
     const currentUser = req.user as UserInterface;
 
     try {
-      if (req.file) {
+      if (req.file && currentUser.avatar.publicId) {
         fs.unlink(
-          path.join(
-            __dirname,
-            `../public/uploads/${currentUser.avatar.publicId}`
-          ),
-          (error) => {
-            if (error) {
-              return next(
-                CreateHttpErrors.internalServerError("Something went wrong!")
-              );
-            }
-          }
+          path.join(__dirname, `../uploads/${currentUser.avatar.publicId}`),
+          (error) => {}
         );
+      }
+
+      let newAvatar = null;
+
+      if (req.file) {
+        newAvatar = {
+          url: `${Keys.APP_BASE_URL}/uploads/${req.file.filename}`,
+          publicId: req.file.filename,
+        };
       }
 
       const user = await User.findOneAndUpdate(
@@ -107,15 +107,13 @@ class UserController {
           $set: {
             bio: bio || currentUser.bio,
             name: name || currentUser.name,
-            avatar: req.file
-              ? {
-                  url: `${Keys.APP_BASE_URL}/public/upload/${req.file.filename}`,
-                  publicId: req.file.filename,
-                }
-              : currentUser.avatar,
+            avatar: {
+              url: newAvatar?.url || currentUser.avatar.url,
+              publicId: newAvatar?.publicId || currentUser.avatar.publicId,
+            },
           },
         },
-        { $new: true }
+        { new: true }
       );
 
       return res.status(201).json({
