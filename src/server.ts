@@ -34,10 +34,7 @@ app.use(
   })
 );
 
-app.use(
-  "/public/uploads",
-  express.static(path.resolve(__dirname, "public/uploads"))
-);
+app.use("/public/uploads", express.static(path.resolve("public/uploads")));
 
 // passport
 passport.initialize();
