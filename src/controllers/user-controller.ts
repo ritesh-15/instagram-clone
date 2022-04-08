@@ -96,7 +96,7 @@ class UserController {
 
       if (req.file) {
         newAvatar = {
-          url: `${Keys.APP_BASE_URL}/uploads/${req.file.filename}`,
+          url: `${Keys.APP_BASE_URL}uploads/${req.file.filename}`,
           publicId: req.file.filename,
         };
       }
