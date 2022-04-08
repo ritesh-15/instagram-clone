@@ -13,6 +13,9 @@ router
 
 router
   .route("/update-profile")
-  .put([isAuthenticated], UserController.updateProfile);
+  .put(
+    [isAuthenticated, uploader.single("image")],
+    UserController.updateProfile
+  );
 
 export { router as userRouter };
