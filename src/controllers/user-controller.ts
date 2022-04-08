@@ -87,7 +87,7 @@ class UserController {
     try {
       if (req.file && currentUser.avatar.publicId) {
         fs.unlink(
-          path.join(__dirname, `../uploads/${currentUser.avatar.publicId}`),
+          path.join(__dirname, "../uploads", currentUser.avatar.publicId),
           (error) => {}
         );
       }
